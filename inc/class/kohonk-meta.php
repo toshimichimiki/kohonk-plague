@@ -22,6 +22,7 @@ class KohonkMeta{
 					'name' => __('alignment', 'kohonk-plague'),
 					'id' => $prefix . 'align',
 					'type' => 'radio',
+					'inline' => false,
 					'options' => array(
 						'ltr' => __('Left to right', 'kohonk-plague'),
 						'rtl' => __('Right to left', 'kohonk-plague'),
