@@ -23,6 +23,7 @@ class KohonkPost{
 		);
 		$slug = 'logotyping';
 		$supports = array(
+			'title',
 			'editor',
 		);
 		$taxonomies = array();
