@@ -19,7 +19,7 @@ class KohonkPlague
 {
 	function __construct($global=null)
 	{
-		add_action('tgmpa_register', 'register_required_plugins');
+		add_action('tgmpa_register', array($this, 'register_required_plugins'));
 	}
 	function register_required_plugins()
 	{
