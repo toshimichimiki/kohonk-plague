@@ -21,7 +21,7 @@ class KohonkMeta{
 				array(
 					'name' => __('alignment', 'kohonk-plague'),
 					'id' => $prefix . 'align',
-					'type' => 'checkbox_list',
+					'type' => 'select_advanced',
 					'options' => array(
 						'ltr' => __('Left to right', 'kohonk-plague'),
 						'rtl' => __('Right to left', 'kohonk-plague'),
