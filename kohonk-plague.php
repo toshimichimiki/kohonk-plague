@@ -15,11 +15,13 @@ GitHub Branch: master
 */
 if(!class_exists('KohonkPlague')):
 require_once(plugin_dir_path( __FILE__ ) . 'dropin/class-tgm-plugin-activation.php');
+require_once(plugin_dir_path( __FILE__ ) . 'inc/class/kohonk-post.php');
 class KohonkPlague
 {
 	function __construct($global=null)
 	{
 		add_action('tgmpa_register', array($this, 'register_required_plugins'));
+		new KohonkPost();
 	}
 	function register_required_plugins()
 	{
@@ -44,7 +46,16 @@ class KohonkPlague
 			),
 		);
 		$config = array(
-
+			'id' => 'kohonk-plague',
+			'default_path' => '',
+			'menu' => 'tgmpa-install-plugins',
+			'parent_slug' => 'plugins.php',
+			'capability' => 'manage_options',
+			'has_notices' => true,
+			'dismissable' => false,
+			'dismiss_msg'  => '',
+			'is_automatic' => true,
+			'message'      => '',
 		);
 		tgmpa($plugins, $config);
 	}
