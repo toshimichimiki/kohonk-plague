@@ -25,13 +25,6 @@ class KohonkPlague
 	{
 		$plugins = array(
 			array(
-				'name' => 'GitHub Updater',
-				'slug' => 'github-updater',
-				'source' => 'https://github.com/afragen/github-updater/archive/master.zip',
-				'required' => true,
-				'force_activation' => true,
-			),
-			array(
 				'name' => 'WP REST API',
 				'slug' => 'rest-api',
 				'required' => true,
