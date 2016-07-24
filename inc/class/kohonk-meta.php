@@ -12,7 +12,7 @@ class KohonkMeta{
 			'title' => 'Paragraph settings',
 			'post_types' => 'logotype',
 			'context' => 'side',
-			'fields' =>
+			'fields' => array(
 				array(
 					'name' => __('keywords', 'kohonk-plague'),
 					'id' => $prefix . 'keywords',
@@ -22,14 +22,14 @@ class KohonkMeta{
 					'name' => __('alignment', 'kohonk-plague'),
 					'id' => $prefix . 'align',
 					'type' => 'checkbox_list',
-					'options' =>
-						array(
-							'ltr' => __('Left to right', 'kohonk-plague'),
-							'rtl' => __('Right to left', 'kohonk-plague'),
-							'center' => __('Centering', 'kohonk-plague'),
-							'justify' => __('Justification', 'kohonk-plague'),
-						),
+					'options' => array(
+						'ltr' => __('Left to right', 'kohonk-plague'),
+						'rtl' => __('Right to left', 'kohonk-plague'),
+						'center' => __('Centering', 'kohonk-plague'),
+						'justify' => __('Justification', 'kohonk-plague'),
+					),
 				),
+			),
 		);
 		return $meta_boxes;
 	}
