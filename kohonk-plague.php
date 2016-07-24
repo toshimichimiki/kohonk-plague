@@ -16,12 +16,14 @@ GitHub Branch: master
 if(!class_exists('KohonkPlague')):
 require_once(plugin_dir_path( __FILE__ ) . 'dropin/class-tgm-plugin-activation.php');
 require_once(plugin_dir_path( __FILE__ ) . 'inc/class/kohonk-post.php');
+require_once(plugin_dir_path( __FILE__ ) . 'inc/class/kohonk-meta.php');
 class KohonkPlague
 {
 	function __construct($global=null)
 	{
 		add_action('tgmpa_register', array($this, 'register_required_plugins'));
 		new KohonkPost();
+		new KohonkMeta();
 	}
 	function register_required_plugins()
 	{
